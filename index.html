@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAPK Weapon Custom</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Serif KR', serif;
+  background:
+    radial-gradient(circle at top, rgba(95, 12, 34, 0.35), transparent 35%),
+    linear-gradient(180deg, #080607 0%, #14080c 55%, #050505 100%);
+  color: #eee4e4;
+  word-break: keep-all;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 42px 42px;
+  pointer-events: none;
+  opacity: .35;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 80px 7vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel {
+  width: 100%;
+  max-width: 980px;
+  padding: 46px;
+  border: 1px solid rgba(128, 22, 48, .8);
+  background: rgba(10, 7, 8, .86);
+  box-shadow: 0 0 45px rgba(80, 0, 24, .35);
+  position: relative;
+}
+
+.panel::before {
+  content: "CONFIDENTIAL";
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  color: rgba(165, 32, 66, .45);
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.logo {
+  color: #9f1d43;
+  letter-spacing: 5px;
+  font-size: 13px;
+  margin-bottom: 22px;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: clamp(30px, 6vw, 62px);
+  line-height: 1.15;
+  color: #f5eeee;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: clamp(25px, 4vw, 42px);
+  color: #f4e8e8;
+  border-bottom: 1px solid rgba(128, 22, 48, .8);
+  padding-bottom: 18px;
+}
+
+h3 {
+  color: #c33a61;
+  margin-top: 34px;
+  font-size: 20px;
+}
+
+p, li {
+  line-height: 1.9;
+  font-size: 16px;
+  color: #d6caca;
+}
+
+.notice {
+  margin: 28px 0;
+  padding: 22px;
+  border-left: 4px solid #8d193b;
+  background: rgba(73, 9, 28, .28);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 28px 0;
+}
+
+.info-box {
+  padding: 18px;
+  border: 1px solid rgba(128, 22, 48, .6);
+  background: rgba(255,255,255,.035);
+}
+
+.info-box span {
+  display: block;
+  color: #9f1d43;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 26px;
+  padding: 15px 30px;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #7d1636, #3a0717);
+  border: 1px solid #ad355b;
+  letter-spacing: 2px;
+  transition: .25s;
+}
+
+.button:hover {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+}
+
+.section-card {
+  margin-top: 24px;
+  padding: 26px;
+  border: 1px solid rgba(128, 22, 48, .55);
+  background: rgba(255,255,255,.03);
+}
+
+.small {
+  font-size: 14px;
+  color: #a99494;
+}
+
+.warning {
+  color: #ffb6c8;
+}
+
+.back {
+  margin-left: 12px;
+  color: #b58b99;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 38px 18px;
+    align-items: flex-start;
+  }
+
+  .panel {
+    padding: 30px 22px;
+  }
+
+  .panel::before {
+    position: static;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  p, li {
+    font-size: 14.5px;
+    line-height: 1.8;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .back {
+    display: block;
+    margin: 18px 0 0;
+    text-align: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="page" id="main">
+  <div class="panel">
+    <div class="logo">KAPK SYSTEM / WEAPON CUSTOM</div>
+
+    <h1>무기 커스텀<br>1차 신청 안내</h1>
+
+    <p>
+      대한민국 전문 킬러 협회 KAPK에서 주관하는 무기 커스텀 1차 신청 기간입니다.
+      킬러 님들은 아래에 명시된 신청 안내를 정독하시고 기준에 맞게 접수 부탁드립니다.
+    </p>
+
+    <div class="notice">
+      <p>
+        <strong>1차 신청 기간 | 26.06.20 ~ 26.06.27</strong><br>
+        <span class="small">* 무기 커스텀 제작은 신청 기간에만 접수 받습니다.</span>
+      </p>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-box">
+        <span>접수처</span>
+        킬러협회시스템
+      </div>
+      <div class="info-box">
+        <span>제출 사진</span>
+        무기 전체 사진 1장
+      </div>
+      <div class="info-box">
+        <span>세부 사진</span>
+        세부 사진 2장
+      </div>
+    </div>
+
+    <a href="#form" class="button">신청 양식 확인</a>
+  </div>
+</section>
+
+<section class="page" id="form">
+  <div class="panel">
+    <div class="logo">KAPK FORM / RESTRICTED ACCESS</div>
+
+    <h2>커스텀 무기 신청 양식</h2>
+
+    <div class="section-card">
+      <h3>1️⃣ 주무기</h3>
+      <p>
+        기존 설정한 주무기 카테고리와 동일하게 작성해 주세요.<br>
+        [화기류 / 날카로운 무기 / 타격 도구 / 특수 무기]
+      </p>
+
+      <h3>2️⃣ 무기 이름</h3>
+      <p>
+        한글명 + 영문명을 함께 기재해 주세요.<br>
+        기존에 사용 중인 무기 명칭을 유지하는 것을 원칙으로 합니다.
+        다만 제작사, 개조 모델, 특수 사양, 운용 목적 등을 나타내는 식별 명칭을 추가하여
+        새로운 이름으로 사용하는 것은 가능합니다.
+      </p>
+      <p class="small">
+        Ex) MPX Carbine → GT-D SIG Sauer MPX Carbine<br>
+        Ex) 초리메 *메 : 쇠망치
+      </p>
+      <p>
+        특수 무기의 경우 독자적인 설계품으로 취급되므로, 기존 무기명과 무관한 완전한 신규 명칭 사용이 가능합니다.
+      </p>
+
+      <h3>3️⃣ 무기 외형 및 특이사항</h3>
+      <p>
+        최대 400자. 무기의 외형, 구조, 사용 방식 등을 자유롭게 서술해 주세요.
+        제작 출처, 제작 과정, 개발 비화 등 설정을 포함할 수 있습니다.
+        휴대가 가능한 형태여야 하며, 세트형 무기의 경우 세트 구성에 대한 설명을 함께 작성해 주세요.
+      </p>
+
+      <h3>4️⃣ 무기 능력</h3>
+      <p>
+        최대 400자. 기능은 최대 3개까지 작성 가능합니다.
+        무기의 특수 기능, 보조 장치, 전투 활용 방식 등을 중심으로 서술해 주세요.
+        강점과 약점을 적절히 분배하며, 작성 시 유의사항을 준수하시기 바랍니다.
+      </p>
+    </div>
+
+    <div class="section-card">
+      <h2>작성 시 유의사항</h2>
+
+      <p class="warning">
+        • 광선 무기, 마법, 초능력 등 지나치게 SF적이거나 초월적인 능력은 불가합니다.
+      </p>
+
+      <p>
+        • 세계관은 현대 판타지를 기준으로 하며, 현실 기술을 확장한 수준의 특수 기능을 권장합니다.
+      </p>
+
+      <p class="small">
+        Ex) 《킹스맨》, 《존 윅》과 같은 첩보·암살물 계열 O<br>
+        Ex) 《스타워즈》, 《가디언즈 오브 갤럭시》와 같은 우주 SF 계열 X
+      </p>
+
+      <p>
+        • 능력은 무기의 성능과 장치에서 비롯되어야 하며,
+        사용자 개인의 초능력으로 해석될 수 있는 설정은 제한될 수 있습니다.
+      </p>
+    </div>
+
+    <a href="#main" class="button">처음으로</a>
+    <a href="#" class="back">KAPK SYSTEM CLOSE</a>
+  </div>
+</section>
+
+</body>
+</html>
